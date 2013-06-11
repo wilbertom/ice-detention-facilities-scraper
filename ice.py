@@ -4,6 +4,6 @@ facilities_table = PyQuery(url="http://www.ice.gov/detention-facilities/")('#lin
 for tr in facilities_table:
     tr = PyQuery(tr)
     f_name = tr('td')('a')[0].text
-    other = tr('td')[1].text
-    print f_name + ',' + other
+    f_state = tr('td')[1].text
+    print f_name + ',' + f_state
     
